@@ -1,0 +1,635 @@
+/* =========================
+   V'S BARBERSHOP
+   PREMIUM STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #11100e;
+    color: #f5f0e8;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 6%;
+
+    background: rgba(17, 16, 14, 0.94);
+    border-bottom: 1px solid rgba(190, 157, 86, 0.25);
+
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #d2ad63;
+}
+
+.logo span {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: #f5f0e8;
+    text-align: center;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 28px;
+}
+
+.navbar nav a {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #d2ad63;
+}
+
+.nav-button {
+    padding: 12px 20px;
+    border: 1px solid #d2ad63;
+    color: #d2ad63;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background: #d2ad63;
+    color: #11100e;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 140px 8% 80px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(17, 16, 14, 0.95),
+            rgba(17, 16, 14, 0.65),
+            rgba(17, 16, 14, 0.35)
+        ),
+        url("images/barber-cutting.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.eyebrow {
+    color: #d2ad63;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 100px);
+    line-height: 0.95;
+    margin-bottom: 30px;
+}
+
+.hero h1 span,
+h2 span {
+    color: #d2ad63;
+}
+
+.hero-text {
+    max-width: 520px;
+    font-size: 18px;
+    color: #d6d0c6;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn.primary {
+    background: #d2ad63;
+    color: #11100e;
+}
+
+.btn.primary:hover {
+    background: #f0cf8c;
+    transform: translateY(-2px);
+}
+
+.btn.secondary {
+    border: 1px solid #d2ad63;
+    color: #d2ad63;
+}
+
+.btn.secondary:hover {
+    background: #d2ad63;
+    color: #11100e;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section {
+    padding: 100px 8%;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin-bottom: 50px;
+}
+
+.section-heading.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-heading h2 {
+    font-size: clamp(40px, 5vw, 65px);
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.section-heading p:not(.eyebrow) {
+    color: #aaa49a;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    background: #181714;
+}
+
+.about-content {
+    padding-top: 20px;
+}
+
+.about-content p {
+    color: #c4beb4;
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+.text-link {
+    display: inline-block;
+    color: #d2ad63;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    background: #11100e;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.service-card {
+    position: relative;
+    padding: 30px;
+    min-height: 180px;
+
+    background: #1b1916;
+    border: 1px solid rgba(210, 173, 99, 0.18);
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: #d2ad63;
+}
+
+.service-card h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #aaa49a;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    max-width: 250px;
+}
+
+.service-card strong {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+
+    color: #d2ad63;
+    font-size: 23px;
+}
+
+.service-card.featured {
+    background: #211e19;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+    background: #181714;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.feature {
+    padding: 30px;
+    border-top: 1px solid #d2ad63;
+}
+
+.feature-number {
+    color: #d2ad63;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+.feature h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.feature p {
+    color: #aaa49a;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+    background: #11100e;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+}
+
+.gallery-grid img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.gallery-grid img:first-child {
+    grid-row: span 2;
+    height: 815px;
+}
+
+
+/* =========================
+   REVIEWS
+========================= */
+
+.reviews {
+    background: #181714;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    color: #d2ad63;
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+}
+
+.rating span {
+    color: #aaa49a;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.review-card {
+    padding: 35px;
+    background: #11100e;
+    border: 1px solid rgba(210, 173, 99, 0.2);
+}
+
+.stars {
+    color: #d2ad63;
+    margin-bottom: 20px;
+}
+
+.review-card p {
+    color: #d0cbc2;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.review-card strong {
+    color: #d2ad63;
+}
+
+
+/* =========================
+   BOOKING
+========================= */
+
+.booking {
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(17, 16, 14, 0.9),
+            rgba(17, 16, 14, 0.9)
+        ),
+        url("images/shop-exterior.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.booking-content {
+    max-width: 750px;
+    margin: auto;
+}
+
+.booking h2 {
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.booking p:not(.eyebrow) {
+    color: #c4beb4;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    background: #11100e;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.contact-grid > div {
+    padding: 30px;
+    border-left: 2px solid #d2ad63;
+}
+
+.contact-grid h3 {
+    margin-bottom: 15px;
+    color: #d2ad63;
+}
+
+.contact-grid p,
+.contact-grid a {
+    color: #c5c0b8;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.contact-grid a:hover {
+    color: #d2ad63;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 60px 20px;
+
+    background: #0b0a09;
+    border-top: 1px solid rgba(210, 173, 99, 0.2);
+}
+
+.footer-logo {
+    color: #d2ad63;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.footer-logo span {
+    display: block;
+    color: #f5f0e8;
+    font-size: 10px;
+    letter-spacing: 5px;
+}
+
+footer > p {
+    color: #aaa49a;
+    margin: 15px 0;
+}
+
+footer > a {
+    color: #d2ad63;
+}
+
+.copyright {
+    margin-top: 35px !important;
+    font-size: 12px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .about,
+    .feature-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid img,
+    .gallery-grid img:first-child {
+        height: 350px;
+        grid-row: auto;
+    }
+
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 75px 6%;
+    }
+
+    .nav-button {
+        padding: 9px 12px;
+        font-size: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .hero {
+        min-height: 90vh;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: 160px;
+    }
+
+    .gallery-grid img,
+    .gallery-grid img:first-child {
+        height: 280px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-grid > div {
+        padding: 20px;
+    }
+}
